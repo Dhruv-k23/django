@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Translation</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Hindi to English Translation</h1>
+            <form method="post">
+                {% csrf_token %}
+                <textarea name="input_text" placeholder="Enter text in Hindi..." required></textarea>
+                <button type="submit" class="btn">Translate</button>
+            </form>
+
+            {% if translated_text %}
+            <div class="result">
+                <h3>Translated Text:</h3>
+                <p>{{ translated_text }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

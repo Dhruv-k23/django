@@ -1,0 +1,132 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.card {
+    background: #1e1e1e;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.card h1 {
+    font-size: 2.5rem;
+    color: #00FF7F;  /* Neon green for a modern and glowing feel */
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 255, 127, 0.7); /* Glowing effect */
+}
+
+textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    background-color: #333;
+    color: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #00FF7F;
+    background-color: #444;
+}
+
+button {
+    background-color: #00FF7F;
+    color: #121212;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc66;
+    transform: translateY(-2px);
+}
+
+.result {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result h3 {
+    font-size: 1.8rem;
+    color: #00FF7F;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.result p {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 25px;
+    }
+
+    .card h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .result h3 {
+        font-size: 1.5rem;
+    }
+
+    .result p {
+        font-size: 1rem;
+    }
+}
